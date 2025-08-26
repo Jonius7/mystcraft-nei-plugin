@@ -62,9 +62,9 @@ ext.configFile.withReader {
 
 ext.minecraft_version = config.minecraft_version
 ext.forge_version = config.forge_version
-ext.codechickenlib = "codechicken:CodeChickenLib:${config.minecraft_version}-${config.CCLIB_version}:dev"
-ext.codechickencore = "codechicken:CodeChickenCore:${config.minecraft_version}-${config.CCC_version}:dev"
-ext.notenoughitems = "codechicken:NotEnoughItems:${config.minecraft_version}-${config.NEI_version}:dev"
+ext.codechickenlib = "com.github.GTNewHorizons:CodeChickenLib:${config.CCLIB_version}:dev"
+ext.codechickencore = "com.github.GTNewHorizons:CodeChickenCore:${config.CCC_version}:dev"
+ext.notenoughitems = "com.github.GTNewHorizons:NotEnoughItems:${config.NEI_version}:dev"
 
 println "$project.name for Forge: " + minecraft_version + "-" + forge_version
 
