@@ -34,6 +34,10 @@ repositories {
         name 'MinecraftS3'
         url 'http://s3.amazonaws.com/Minecraft.Download/libraries'
     }
+    maven {
+        name = "gtnh"
+        url = uri("https://nexus.gtnewhorizons.com/repository/public/")
+    }
 }
 
 apply plugin: 'idea'
@@ -45,8 +49,8 @@ idea {
 
 apply plugin: 'forge'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 ext.configFile = file "build.properties"
 ext.configFile.withReader {
