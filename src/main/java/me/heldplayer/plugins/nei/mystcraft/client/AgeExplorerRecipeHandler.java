@@ -120,7 +120,7 @@ public class AgeExplorerRecipeHandler extends TemplateRecipeHandler {
             recipe.view = LGView.api.createWorldView(recipe.ageInfo.dimId, recipe.ageInfo.spawn, 384, 216);
             recipe.view.setAnimator(new CameraAnimatorPivot(recipe.view.getCamera()) {
                 @Override
-                public void update(float dt) {
+                public void update(long dt) {
                     if (!NEIClientUtils.shiftKey()) {
                         super.update(dt);
                     }
@@ -159,9 +159,8 @@ public class AgeExplorerRecipeHandler extends TemplateRecipeHandler {
         return 1;
     }
 
-    @Override
-    public List<String> handleTooltip(GuiRecipe gui, List<String> currenttip, int recipeId) {
-        CachedBooksRecipe recipe = (CachedBooksRecipe) this.arecipes.get(recipeId);
+    public List<String> handleTooltip(GuiRecipe gui, List<String> currenttip, int recipeId, int recipeId2) {
+        /*CachedBooksRecipe recipe = (CachedBooksRecipe) this.arecipes.get(recipeId);
 
         Point mousepos = GuiDraw.getMousePosition();
         Point relMouse = new Point(mousepos.x - gui.guiLeft - 5, mousepos.y - gui.guiTop - 16);
@@ -231,7 +230,7 @@ public class AgeExplorerRecipeHandler extends TemplateRecipeHandler {
 
             recipe.scroll();
         }
-
+		*/
         return super.handleTooltip(gui, currenttip, recipeId);
     }
 

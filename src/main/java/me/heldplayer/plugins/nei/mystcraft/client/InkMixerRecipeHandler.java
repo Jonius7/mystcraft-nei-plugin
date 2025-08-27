@@ -210,14 +210,13 @@ public class InkMixerRecipeHandler extends TemplateRecipeHandler {
         return 1;
     }
 
-    @Override
-    public List<String> handleItemTooltip(GuiRecipe gui, ItemStack stack, List<String> currenttip, int recipeId) {
+    public List<String> handleItemTooltip(GuiRecipe gui, ItemStack stack, List<String> currenttip, int recipeId, int recipeId2) {
         currenttip = super.handleItemTooltip(gui, stack, currenttip, recipeId);
 
         if (!ModuleTooltips.inkMixerTooltips || !ModuleRecipes.inkMixerEnabled) {
             return currenttip;
         }
-
+        
         Point mousepos = GuiDraw.getMousePosition();
         Point relMouse = new Point(mousepos.x - gui.guiLeft, mousepos.y - gui.guiTop);
 
