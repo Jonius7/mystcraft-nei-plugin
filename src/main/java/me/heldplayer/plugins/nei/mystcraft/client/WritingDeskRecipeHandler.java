@@ -238,7 +238,7 @@ public class WritingDeskRecipeHandler extends TemplateRecipeHandler {
         currenttip = super.handleItemTooltip(gui, stack, currenttip, recipeId);
 
         Point mousepos = GuiDraw.getMousePosition();
-        /*Point relMouse = new Point(mousepos.x - gui.guiLeft, mousepos.y - gui.guiTop);
+        Point relMouse = new Point(mousepos.x - gui.guiLeft, mousepos.y - gui.guiTop);
 
         if (recipe.isNotebook) {
             if (currenttip.isEmpty() && stack == null && new Rectangle(42, 19, 33, 44).contains(relMouse)) {
@@ -286,7 +286,7 @@ public class WritingDeskRecipeHandler extends TemplateRecipeHandler {
                     currenttip.add(StatCollector.translateToLocal("nei.mystcraft.writingdesk.page"));
                 }
             }
-        }*/
+        }
         return currenttip;
     }
 

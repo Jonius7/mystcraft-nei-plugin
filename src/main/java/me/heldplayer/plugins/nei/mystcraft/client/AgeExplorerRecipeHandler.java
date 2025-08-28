@@ -231,7 +231,7 @@ public class AgeExplorerRecipeHandler extends TemplateRecipeHandler {
 
             recipe.scroll();
         }
-		*/
+
         return super.handleTooltip(gui, currenttip, recipeId);
     }
 
