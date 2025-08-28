@@ -210,8 +210,9 @@ public class InkMixerRecipeHandler extends TemplateRecipeHandler {
         return 1;
     }
 
-    public List<String> handleItemTooltip(GuiRecipe gui, ItemStack stack, List<String> currenttip, int recipeId, int recipeId2) {
-        currenttip = super.handleItemTooltip(gui, stack, currenttip, recipeId);
+    @Override
+    public List<String> handleItemTooltip(GuiRecipe<?> gui, ItemStack stack, List<String> currenttip, int recipe) {
+        currenttip = super.handleItemTooltip(gui, stack, currenttip, recipe);
 
         if (!ModuleTooltips.inkMixerTooltips || !ModuleRecipes.inkMixerEnabled) {
             return currenttip;

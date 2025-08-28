@@ -159,8 +159,9 @@ public class AgeExplorerRecipeHandler extends TemplateRecipeHandler {
         return 1;
     }
 
-    public List<String> handleTooltip(GuiRecipe gui, List<String> currenttip, int recipeId, int recipeId2) {
-        /*CachedBooksRecipe recipe = (CachedBooksRecipe) this.arecipes.get(recipeId);
+    @Override
+    public List<String> handleTooltip(GuiRecipe<?> gui, List<String> currenttip, int recipeId) {
+        CachedBooksRecipe recipe = (CachedBooksRecipe) this.arecipes.get(recipeId);
 
         Point mousepos = GuiDraw.getMousePosition();
         Point relMouse = new Point(mousepos.x - gui.guiLeft - 5, mousepos.y - gui.guiTop - 16);

@@ -109,3 +109,10 @@ processResources {
         exclude '*.version'
     }
 }
+
+// Jar stuff
+jar {
+    manifest {
+        attributes 'AccessTransformer': 'spacore_at.cfg'
+    }
+}
